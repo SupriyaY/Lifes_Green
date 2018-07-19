@@ -19,6 +19,12 @@ body {
     padding: 15px 0 10px 0;
 }
 
+carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Nav Bar */
 
 .navbar-default .navbar-collapse,
