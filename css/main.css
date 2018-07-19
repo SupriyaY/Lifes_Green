@@ -12,13 +12,32 @@ body {
     font-family: oswald;
 }
 
-/* Nav Bar */
+/* Header */
 
 #site-header {
     border-top: 10px solid #0088cc;
     padding: 15px 0 10px 0;
 }
+.img-responsive {
+    display: inline-block;
+}
 
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
 carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
     display: block;
     max-width: 100%;
