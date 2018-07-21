@@ -121,6 +121,8 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
     color: green;
     cursor: pointer;
     font-weight: 900;
+    text-decoration: underline;
+    text-decoration-color: green;
 }
 
 
