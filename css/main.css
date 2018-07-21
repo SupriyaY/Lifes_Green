@@ -1,8 +1,15 @@
 
-body{
-    overflow-x: hidden;
-}
 
+body {
+    font-family: "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
 
 html,
 body {
@@ -57,7 +64,8 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color: #e7e7e7;
+    border-color: #FFF;
+    margin-bottom: 0px; 
 }
 
 .navbar-collapse {
@@ -92,6 +100,22 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
     padding-right: 39px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 18px;
+}
+
+nav.navbar.navbar-default {
+    background-color: #FFF;
+    border-color: #FFF;
+    margin-bottom: 0px;
+}
+
+nav.navbar.navbar-default .navbar-nav>li>a {
+   color: #000;
+   cursor: pointer;
+   font-weight: 900;
+}
 
 
 /* .method ol li {
