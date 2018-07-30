@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel=”stylesheet” href='css/main.css'>
     <link rel=”stylesheet” href='styles/reset.css'>
     <link rel=”stylesheet” href='styles/-debug.css'>
     <link rel="icon" type="png" href="images/favicon.png">
@@ -27,6 +26,116 @@ article * { grid-column: 2 / 3; }
     display:         flex;
     justify-content: center;
     align-items:     center;
+}
+#site-header {
+    border-top: 10px solid #0088cc;
+    padding: 15px 0 10px 0;
+}
+.img-responsive {
+    display: inline-block;
+}
+
+[class^='fa-'],
+[class*=' fa-'] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Nav Bar */
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #FFF;
+    margin-bottom: 0px; 
+}
+
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.collapse {
+    display: none;
+}
+
+
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+.navbar-nav>li {
+    padding-right: 39px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 18px;
+}
+
+nav.navbar.navbar-default {
+    background-color: #FFF;
+    border-color: #FFF;
+    margin-bottom: 0px;
+}
+
+nav.navbar.navbar-default .navbar-nav>li>a {
+   color: #000;
+   cursor: pointer;
+   font-weight: 900;
+       border-top: 3px solid transparent;
+}
+
+nav.navbar.navbar-default .navbar-nav>li>a:hover {
+    color: green;
+    cursor: pointer;
+    font-weight: 900;
+    text-decoration: none;
+    border-top: 3px solid green;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
 }
 
     </style>
