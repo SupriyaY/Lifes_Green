@@ -115,14 +115,15 @@ nav.navbar.navbar-default .navbar-nav>li>a {
    color: #000;
    cursor: pointer;
    font-weight: 900;
+   border-top: 3px solid transparent;
 }
 
 nav.navbar.navbar-default .navbar-nav>li>a:hover {
     color: green;
     cursor: pointer;
     font-weight: 900;
-    text-decoration: underline;
-    text-decoration-color: green;
+    text-decoration: none;
+    border-top: 3px solid green;
 }
 
 
