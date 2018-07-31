@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,134 +15,186 @@
     <title>Life's Green</title>
 </head>
 <style>
+    article {
+        display: grid;
+        grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+        height: 5in;
+        /* temp fix */
+        padding: 0.5in 0.5in;
+    }
 
-article {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 8.5in) 1fr;
-    height: 11in; /* temp fix */
-}
-article * { grid-column: 2 / 3; }
+    article * {
+        grid-column: start / end;
+    }
 
-.debug-center {
-    display:         flex;
-    justify-content: center;
-    align-items:     center;
-}
-#site-header {
-    border-top: 10px solid #0088cc;
-    padding: 15px 0 10px 0;
-}
-.img-responsive {
-    display: inline-block;
-}
+    @media (max-width: 8.5in) {
+        article {
+            grid-template-columns: 1fr 5% [start] 15% 60% 15%[end] 5% 1fr;
+        }
+    }
 
-[class^='fa-'],
-[class*=' fa-'] {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+    .debug-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-    display: block;
-}
-carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+    #site-header {
+        border-top: 10px solid #0088cc;
+        padding: 15px 0 10px 0;
+    }
 
-/* Nav Bar */
+    .img-responsive {
+        display: inline-block;
+    }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    border-color: #FFF;
-    margin-bottom: 0px; 
-}
+    [class^='fa-'],
+    [class*=' fa-'] {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-.navbar-collapse {
-    padding-right: 15px;
-    padding-left: 15px;
-    overflow-x: visible;
-    -webkit-overflow-scrolling: touch;
-    border-top: 1px solid transparent;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
-}
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section,
+    summary {
+        display: block;
+    }
 
-.collapse {
-    display: none;
-}
+    carousel-inner>.item>a>img,
+    .carousel-inner>.item>img,
+    .img-responsive,
+    .thumbnail a>img,
+    .thumbnail>img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Nav Bar */
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #FFF;
+        margin-bottom: 0px;
+    }
+
+    .navbar-collapse {
+        padding-right: 15px;
+        padding-left: 15px;
+        overflow-x: visible;
+        -webkit-overflow-scrolling: touch;
+        border-top: 1px solid transparent;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    }
+
+    .collapse {
+        display: none;
+    }
 
 
 
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-.nav>li {
-    position: relative;
-    display: block;
-}
+    .nav>li {
+        position: relative;
+        display: block;
+    }
 
-.navbar-nav>li {
-    padding-right: 39px;
-}
+    .navbar-nav>li {
+        padding-right: 39px;
+    }
 
-.navbar-default .navbar-nav>li>a {
-    color: black;
-    font-size: 18px;
-}
+    .navbar-default .navbar-nav>li>a {
+        color: black;
+        font-size: 18px;
+    }
 
-nav.navbar.navbar-default {
-    background-color: #FFF;
-    border-color: #FFF;
-    margin-bottom: 0px;
-}
+    nav.navbar.navbar-default {
+        background-color: #FFF;
+        border-color: #FFF;
+        margin-bottom: 0px;
+    }
 
-nav.navbar.navbar-default .navbar-nav>li>a {
-   color: #000;
-   cursor: pointer;
-   font-weight: 900;
-       border-top: 3px solid transparent;
-}
+    nav.navbar.navbar-default .navbar-nav>li>a {
+        color: #000;
+        cursor: pointer;
+        font-weight: 900;
+        border-top: 3px solid transparent;
+    }
 
-nav.navbar.navbar-default .navbar-nav>li>a:hover {
-    color: green;
-    cursor: pointer;
-    font-weight: 900;
-    text-decoration: none;
-    border-top: 3px solid green;
-}
+    nav.navbar.navbar-default .navbar-nav>li>a:hover {
+        color: green;
+        cursor: pointer;
+        font-weight: 900;
+        text-decoration: none;
+        border-top: 3px solid green;
+    }
 
-.nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-}
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
 
-    </style>
+    h1 {
+        font: 700 2.0rem/1.2 …;
+        color: hsl(000, 000%, 33%);
+    }
+
+    h2 {
+        font: 400 1.5rem/1.2 …;
+        color: hsl(000, 000%, 33%);
+    }
+
+    time {
+        font: 700 1.5rem/1.2 …;
+         color: hsl(000, 000%, 33%);
+    }
+
+    h3 {
+        font: 700 2.0rem/1.2 …;
+        color: hsl(000, 000%, 33%);
+    }
+
+    p {
+        font: 400 1.5rem/1.5 …;
+        color: hsl(000, 000%, 33%);
+    }
+
+    #the-benefits a {
+        box-shadow: inset 0 -0.25em hsl(145, 90%, 42%);
+    }
+
+    h2,
+    p {
+        margin-bottom: 2.4rem;
+    }
+</style>
+
 <body>
+
     <body style="overflow-x: hidden;">
-    
+
         <header class="hidden-print">
             <div id="site-header">
                 <div class="">
@@ -158,10 +211,10 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                                         <!-- <img src="" class="img-responsive prof-img" /> -->
                                     </div>
                                     <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
-    
+
                                         <div class="hidden-xs">
                                             <ul class="list-unstyled">
-    
+
                                                 <li class="text-blue text-strong" style="font-size: 18px;">Contact Life's Green</li>
                                                 <li style="font-size: 12px; margin-top: 5px;">
                                                     <a>
@@ -184,7 +237,7 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                                                 </li>
                                             </ul>
                                         </div>
-    
+
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +246,7 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                 </div>
             </div>
             <!-- Nav -->
-    
+
             <nav>
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
@@ -208,7 +261,7 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                         <div class="">
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-    
+
                                     <li>
                                         <a href="index.html">
                                             Home
@@ -229,14 +282,14 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                                             Log In
                                         </a>
                                     </li>
-    
+
                                     <li>
                                         <a href="cart.html">
                                             <i class="fas fa-cart-plus"></i>
                                             My Cart</a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="blog.html">
                                             Our Blog</a>
                                     </li>
                                 </ul>
@@ -246,11 +299,46 @@ nav.navbar.navbar-default .navbar-nav>li>a:hover {
                     </div>
                 </nav>
         </header>
-    <article>
-        <p class='debug-center'>ARTICLE</p>
-    </article>
-    <article>
-        <p class='debug-center'>ARTICLE</p>
-    </article>
-</body>
+        <article>
+            <!-- <img src="images/blogpic.jpg" alt="friends"> -->
+            <article id="the-benefits">
+                <h1>
+                    <a href="#the-benefits">Lorem ipsum</a>
+                </h1>
+                <h2></h2>
+                <time datetime="07-30-2018">JULY 30, 2018</time>
+                <p>
+                    <em>A generation ago</em>, the pain medication seeker
+                    <a href="#">Lorem Ipsum</a>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore beatae, iure
+                    earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit? Maiores? Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore beatae,
+                    iureearum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit? Maiores? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore
+                    beatae, iure earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit? Maiores?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam
+                    labore beatae, iure earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit?
+                    Maiores?
+                </p>
+                <h3>PAIN RELIEF IS ALSO A STORY ABOUT US</h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore
+                    beatae, iure earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit? Maiores?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam
+                    labore beatae, iureearum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit?
+                    Maiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque
+                    ullam labore beatae, iure earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis
+                    velit? Maiores?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore beatae, iure
+                    earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit? Maiores? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Explicabo illo blanditiis a nisi neque ullam labore beatae, iureearum distinctio! Ullam error quam aliquid
+                    dolorem nam asperiores veritatis velit? Maiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illo blanditiis
+                    a nisi neque ullam labore beatae, iure earum distinctio! Ullam error quam aliquid dolorem nam asperiores veritatis velit?
+                    Maiores?
+                    <strong>Accept these terms, and the pain relief is yours.</strong>
+                </p>
+            </article>
+            <article>
+<img src="images/blogpic.jpg" alt="" style="height: 120%; width: 100%">
+            </article>
+    </body>
+
 </html>
