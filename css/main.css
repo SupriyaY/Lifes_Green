@@ -139,6 +139,25 @@ display: inline-block;
 
 /* footer */
 
+#flex{
+    	display: flex;
+    	justify-content: space-around;
+    	align-items: center;
+}
+
+
+
 .sign-up{
     display: inline-block;
+    width: 20%;
 }
+
+ @media only screen and (max-width: 650px) {
+     #flex {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+ }
